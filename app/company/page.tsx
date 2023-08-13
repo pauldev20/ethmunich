@@ -43,7 +43,7 @@ export default function UserPage() {
 
 	const deleteBillboard = useCallback(async () => {
 		setLoading(true);
-		await fetch("http://" + process.env.NEXT_PUBLIC_SERVER_HOST + "/blockchain/unstake", {
+		await fetch("https://" + process.env.NEXT_PUBLIC_SERVER_HOST + "/blockchain/unstake", {
 			method: 'POST',
 			headers: {
 			  'Accept': 'application/json',
@@ -56,7 +56,7 @@ export default function UserPage() {
 
 	const fetchBillboards = useCallback(async () => {
 		setLoading(true);
-		const response1 = await fetch("http://" + process.env.NEXT_PUBLIC_SERVER_HOST + "/bill-board");
+		const response1 = await fetch("https://" + process.env.NEXT_PUBLIC_SERVER_HOST + "/bill-board");
 		const data = await response1.json();
 		var newBillboards: Billboard[] = [];
 		for (var i in data) {
@@ -73,7 +73,7 @@ export default function UserPage() {
 		}
 		console.log(data);
 		setBillboards(newBillboards);
-		const response2 = await fetch("http://" + process.env.NEXT_PUBLIC_SERVER_HOST + "/company/getRentedByCompany");
+		const response2 = await fetch("https://" + process.env.NEXT_PUBLIC_SERVER_HOST + "/company/getRentedByCompany");
 		const data2 = await response2.json();
 		var myBillboards: Number[] = [];
 		for (var i in data2) {
