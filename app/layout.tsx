@@ -9,7 +9,7 @@ import clsx from "clsx";
 
 export const metadata: Metadata = {
 	title: "BlockBoard",
-	description: "Elevate Your Message, Securely Shared: Blockboard - Where Blockchain and Billboards Converge!",
+	description: "Earn passive income 💸 Advertise cheaply 📈",
 	themeColor: [
 		{ media: "(prefers-color-scheme: light)", color: "white" },
 		{ media: "(prefers-color-scheme: dark)", color: "black" },
