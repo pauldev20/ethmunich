@@ -24,7 +24,7 @@ export function BookBillboardModal({isOpen, selectedBillboard, onOpenChange, onC
 	} = useForm<Inputs>();
 	const onSubmit: SubmitHandler<Inputs> = async (data) => {
 		console.log({ad_url: data.url, billboard_token_id: selectedBillboard, cost_per_block: Number(data.cost_per_block)})
-		await fetch("http://" + process.env.NEXT_PUBLIC_SERVER_HOST + "/blockchain/rentbillboard", {
+		await fetch("https://" + process.env.NEXT_PUBLIC_SERVER_HOST + "/blockchain/rentbillboard", {
 			method: 'POST',
 			headers: {
 			  'Accept': 'application/json',
