@@ -2,7 +2,7 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
 	name: "BlockBoard",
-	description: "Elevate Your Message, Securely Shared: Blockboard - Where Blockchain and Billboards Converge!",
+	description: "Earn passive income 💸 Advertise cheaply 📈",
 	navItems: [
 		{
 			label: "Home",
