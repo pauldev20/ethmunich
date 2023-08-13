@@ -8,11 +8,8 @@ import { Link } from "@nextui-org/link";
 import clsx from "clsx";
 
 export const metadata: Metadata = {
-	title: {
-		default: siteConfig.name,
-		template: `%s - ${siteConfig.name}`,
-	},
-	description: siteConfig.description,
+	title: "BlockBoard",
+	description: "Elevate Your Message, Securely Shared: Blockboard - Where Blockchain and Billboards Converge!",
 	themeColor: [
 		{ media: "(prefers-color-scheme: light)", color: "white" },
 		{ media: "(prefers-color-scheme: dark)", color: "black" },
@@ -40,19 +37,24 @@ export default function RootLayout({
 			>
 				<Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
 					<div className="relative flex flex-col h-screen">
-						<Navbar />
-						<main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
+						<Navbar 
+							links={[
+								{label: "Home", href: "/"},
+								{label: "User", href: "/user"},
+								{label: "Company", href: "/company"}
+							]}
+						/>
+						<main className="container mx-auto max-w-7xl px-6 flex-grow">
 							{children}
 						</main>
 						<footer className="w-full flex items-center justify-center py-3">
 							<Link
 								isExternal
 								className="flex items-center gap-1 text-current"
-								href="https://nextui-docs-v2.vercel.app?utm_source=next-app-template"
-								title="nextui.org homepage"
+								href="https://www.42heilbronn.de/en/"
 							>
-								<span className="text-default-600">Powered by</span>
-								<p className="text-primary">NextUI</p>
+								<span className="text-default-600">Made with ❤️ by</span>
+								<p className="text-primary">42 Heilbronn Hackerdojo</p>
 							</Link>
 						</footer>
 					</div>

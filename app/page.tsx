@@ -5,24 +5,23 @@ import { Code } from "@nextui-org/code"
 import { button as buttonStyles } from "@nextui-org/theme";
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
+import Image from "next/image";
 
 export default function Home() {
 	return (
-		<section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+		<section className="h-full flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+			<Image
+				src="/logo.png"
+				alt="BlockBoard Logo"
+				width={350}
+				height={350}
+			/>
 			<div className="inline-block max-w-lg text-center justify-center">
-				<h1 className={title()}>Make&nbsp;</h1>
-				<h1 className={title({ color: "violet" })}>beautiful&nbsp;</h1>
-				<br />
-				<h1 className={title()}>
-					websites regardless of your design experience.
-				</h1>
-				<h2 className={subtitle({ class: "mt-4" })}>
-					Beautiful, fast and modern React UI library.
-				</h2>
+				<h1 className={title({ color: "green" })}>Earn <span className="text-white">passive income 💸 &nbsp;</span></h1>
+				<h1 className={title({ color: "blue" })}>Advertise <span className="text-white">cheaply 📈 &nbsp;</span></h1>
 			</div>
 
-			<div className="flex gap-3">
+			{/* <div className="flex gap-3">
 				<Link
 					isExternal
 					as={NextLink}
@@ -48,7 +47,7 @@ export default function Home() {
 						Get started by editing <Code color="primary">app/page.tsx</Code>
 					</span>
 				</Snippet>
-			</div>
+			</div> */}
 		</section>
 	);
 }
