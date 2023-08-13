@@ -13,12 +13,13 @@ export default function Home() {
 			<Image
 				src="/logo.png"
 				alt="BlockBoard Logo"
+				className="drop-shadow-[0_60px_60px_rgba(0,0,0,0.6)]"
 				width={350}
 				height={350}
 			/>
 			<div className="inline-block max-w-lg text-center justify-center">
-				<h1 className={title({ color: "green" })}>Earn <span className="text-white">passive income 💸 &nbsp;</span></h1>
-				<h1 className={title({ color: "blue" })}>Advertise <span className="text-white">cheaply 📈 &nbsp;</span></h1>
+				<h1 className={title({ color: "green" })}>Earn <span className="text-black dark:text-white">passive income 💸 &nbsp;</span></h1>
+				<h1 className={title({ color: "blue" })}>Advertise <span className="text-black dark:text-white">cheaply 📈 &nbsp;</span></h1>
 			</div>
 
 			{/* <div className="flex gap-3">

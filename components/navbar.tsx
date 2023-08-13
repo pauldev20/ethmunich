@@ -64,9 +64,7 @@ export const Navbar = ({links}: NavbarProps) => {
 				className="sm:hidden"
 				/>
 				<NavbarBrand>
-					{/* <Logo />
-					<p className="font-bold text-inherit">ACME</p> */}
-					<Image src="/logo.png" alt="BlockBoard Logo" width={100} height={100}/>
+					<Image src="/logo.png" alt="BlockBoard Logo" width={100} height={100} className="!drop-shadow-2xl"/>
 				</NavbarBrand>
 			</NavbarContent>
 
